@@ -1,0 +1,702 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pap Fund | KES 200,000 Post-Graduation Living Stipend for Kenyan Medics & Nurses</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        obsidian: '#09090b',
+                        surface: '#121216',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+        }
+        .glass-card {
+            background: rgba(18, 18, 22, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(9, 9, 11, 0) 65%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-obsidian">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-600 to-brand-900 text-white text-xs sm:text-sm font-medium py-2.5 px-4 text-center">
+        <span class="inline-flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            <strong>2026/2027 Cohort Waitlist Open:</strong> Priority allocation for NCK, KMPDC, PPB & COC licensed graduates.
+        </span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 glass-card border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-teal-400 flex items-center justify-center font-display font-extrabold text-obsidian text-xl shadow-lg shadow-brand-500/20">
+                    P
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white">Pap Fund</span>
+                    <span class="block text-[10px] sm:text-xs text-brand-500 font-semibold uppercase tracking-widest">Medic & Nurse Bridge</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#the-reality" class="hover:text-white transition">Why We Exist</a>
+                <a href="#how-it-works" class="hover:text-white transition">Repayment Plan</a>
+                <a href="#faq" class="hover:text-white transition">Q & A</a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Google Sheets Setup Trigger (For Founder) -->
+                <button onclick="openSetupModal()" class="text-xs text-zinc-400 hover:text-white border border-zinc-800 hover:border-zinc-700 px-3 py-2 rounded-xl transition flex items-center gap-1.5" title="Connect Google Sheets">
+                    <i data-lucide="sheet" class="w-3.5 h-3.5 text-brand-500"></i>
+                    <span class="hidden sm:inline">Connect Sheets</span>
+                </button>
+                <a href="#join-waitlist" class="bg-brand-500 hover:bg-brand-600 text-obsidian font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition shadow-lg shadow-brand-500/20">
+                    Claim Your Spot
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Product First, Emotional Hook, Direct Waitlist Form -->
+    <section class="relative hero-glow pt-12 pb-20 sm:pt-20 sm:pb-28 border-b border-zinc-800/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+                
+                <!-- Left Column: Persuasive & Emotional Copy -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-400 text-xs font-semibold">
+                        <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+                        <span>Exclusively for Newly Licensed Nurses, Doctors, Pharmacists & Clinical Officers</span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[54px] text-white leading-[1.12] tracking-tight">
+                        You Survived Medical School. You Shouldn’t Have to Beg for Rent While Waiting for Your First Paycheck.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl">
+                        <strong class="text-white">Pap Fund</strong> gives freshly licensed Kenyan healthcare graduates up to <span class="text-brand-400 font-bold">KES 200,000 in living & relocation stipends</span>—paid in monthly tranches for rent, food, licensing, and interview travel—with <span class="underline decoration-brand-500/60 underline-offset-4">zero repayments until you land a job</span>.
+                    </p>
+
+                    <!-- High-Impact Trust & Repayment Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="glass-card p-4 rounded-2xl">
+                            <div class="text-brand-400 font-display font-extrabold text-xl sm:text-2xl">KES 200,000</div>
+                            <div class="text-xs text-zinc-400 mt-1">Living & relocation stipend disbursed monthly</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl">
+                            <div class="text-white font-display font-extrabold text-xl sm:text-2xl">Up to 25 Mos</div>
+                            <div class="text-xs text-zinc-400 mt-1">Safety grace buffer if job placement delays</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl">
+                            <div class="text-brand-400 font-display font-extrabold text-xl sm:text-2xl">KES 4,200/mo</div>
+                            <div class="text-xs text-zinc-400 mt-1">Gentle 12-year repayment once employed</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2 text-xs text-zinc-400">
+                        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> No Payslip Needed</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> No Title Deed or Logbook</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> Your License Is Your Power</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Waitlist Lead Capture Card -->
+                <div id="join-waitlist" class="lg:col-span-5">
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-2xl border border-brand-500/30 relative">
+                        <div class="absolute -top-3.5 right-6 bg-brand-500 text-obsidian text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                            100% Free Priority Access
+                        </div>
+
+                        <h2 class="font-display font-bold text-xl sm:text-2xl text-white mb-1.5">Reserve Your KES 200,000 Allocation</h2>
+                        <p class="text-xs sm:text-sm text-zinc-400 mb-6">Join the priority cohort waitlist. Takes 45 seconds. Zero obligation.</p>
+
+                        <form id="waitlistForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Full Legal Name (As on National ID)</label>
+                                <input type="text" name="fullName" required placeholder="e.g., Dr. Brian Kamau / Faith Chepkoech"
+                                    class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Safaricom WhatsApp Number</label>
+                                    <input type="tel" name="phone" required placeholder="0712 345 678"
+                                        class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Email Address</label>
+                                    <input type="email" name="email" required placeholder="you@gmail.com"
+                                        class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Healthcare Cadre</label>
+                                    <select name="cadre" required
+                                        class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                        <option value="" disabled selected>Select Profession...</option>
+                                        <option value="BScN Nurse">BScN Nurse (NCK)</option>
+                                        <option value="KRCHN Nurse">KRCHN / Diploma Nurse (NCK)</option>
+                                        <option value="Medical Doctor">Medical Officer / Doctor (KMPDC)</option>
+                                        <option value="Pharmacist">Pharmacist (PPB)</option>
+                                        <option value="Dentist">Dental Officer (KMPDC)</option>
+                                        <option value="Clinical Officer">Clinical Officer (COC)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Current Licensing Status</label>
+                                    <select name="licenseStatus" required
+                                        class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                        <option value="" disabled selected>Select Status...</option>
+                                        <option value="Licensed & Job Hunting">Licensed & Actively Job Hunting</option>
+                                        <option value="Passed Board Exams">Passed Board Exams (Awaiting License)</option>
+                                        <option value="Awaiting MoH Internship">Cleared for MoH Internship Posting</option>
+                                        <option value="Overseas Pipeline">In Overseas Agency Pipeline (UK/US/DE)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Board Registration / Index Number <span class="text-zinc-500 font-normal">(Optional for faster pre-vetting)</span></label>
+                                <input type="text" name="boardNumber" placeholder="e.g., NCK/REG/12345 or KMPDC Index"
+                                    class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">What is your #1 financial pressure right now?</label>
+                                <select name="primaryNeed" required
+                                    class="w-full bg-zinc-900/90 border border-zinc-700/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                    <option value="Rent & Daily Upkeep">Paying Rent & Basic Food Upkeep</option>
+                                    <option value="Internship Relocation">Relocating to County Hospital for Internship</option>
+                                    <option value="Licensing & Chapter 6">Board Licensing Fees & Chapter 6 Clearances</option>
+                                    <option value="Overseas Exams / Interviews">NCLEX / IELTS / Job Interview Travel</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" id="submitBtn"
+                                class="w-full bg-brand-500 hover:bg-brand-600 text-obsidian font-display font-extrabold text-sm sm:text-base py-4 rounded-xl transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 mt-2">
+                                <span>Join the Priority Waitlist</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+
+                            <p class="text-[11px] text-zinc-500 text-center leading-relaxed">
+                                Protected under the Kenya Data Protection Act. We never spam or sell your personal credentials.
+                            </p>
+                        </form>
+
+                        <!-- Success Message Box (Hidden initially) -->
+                        <div id="successBox" class="hidden text-center py-6 space-y-4">
+                            <div class="w-16 h-16 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center mx-auto">
+                                <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white">You’re Officially on the Priority List!</h3>
+                            <p class="text-sm text-zinc-300 leading-relaxed">
+                                Thank you, <span id="confirmName" class="text-brand-400 font-semibold">Colleague</span>. Your profile has been logged for our upcoming cohort disbursement. Watch your WhatsApp and email for verification instructions.
+                            </p>
+                            <div class="pt-2">
+                                <button onclick="copyShareLink()" class="inline-flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition">
+                                    <i data-lucide="share-2" class="w-3.5 h-3.5 text-brand-400"></i>
+                                    <span id="copyBtnText">Share With Your Graduating Class</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EMOTIONAL STORY & PROBLEM SECTION: "The Silent Struggle After Graduation" -->
+    <section id="the-reality" class="py-20 sm:py-28 border-b border-zinc-800/60 bg-zinc-950/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest">The Unspoken Truth</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-2 mb-4">
+                    The Cruelest Gap in a Kenyan Healthcare Career
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed">
+                    You spent 4 to 6 years sacrificing sleep, mastering clinical rotations, and passing grueling board exams. Then graduation day ends—and the hardest battle begins.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-7 rounded-3xl border border-zinc-800">
+                    <div class="w-11 h-11 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center mb-5">
+                        <i data-lucide="wallet" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2.5">HELB Stops. Rent Doesn’t.</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        The moment your final exams end, student upkeep vanishes. Yet landlords in Nairobi, Eldoret, Kisumu, and Mombasa still demand rent at the end of the month while you wait for postings or interviews.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-7 rounded-3xl border border-zinc-800">
+                    <div class="w-11 h-11 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5">
+                        <i data-lucide="file-warning" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2.5">Trapped by Paperwork Fees</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        You have the degree and the license—but applying for jobs requires Chapter 6 clearances, Good Conduct, practicing certificates, and bus fare to drop CVs across county hospitals.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-7 rounded-3xl border border-zinc-800">
+                    <div class="w-11 h-11 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-5">
+                        <i data-lucide="landmark" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2.5">Banks Call You "High Risk"</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Traditional banks shut their doors because you don't have a 3-month payslip yet—forcing brilliant doctors and nurses into predatory mobile loan apps or awkward family begging.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Emotional Callout Banner -->
+            <div class="mt-12 bg-gradient-to-r from-brand-900/40 via-surface to-brand-900/40 border border-brand-500/30 p-7 sm:p-10 rounded-3xl text-center max-w-4xl mx-auto">
+                <p class="font-display font-bold text-lg sm:text-2xl text-white leading-snug">
+                    "We believe a licensed nurse or doctor is one of the safest, most valuable investments in Kenya. We bet on your future paycheck so you can stand on your feet today."
+                </p>
+                <p class="text-xs sm:text-sm text-brand-400 font-semibold mt-3">— The Pap Fund Promise</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS & REPAYMENT PLAN -->
+    <section id="how-it-works" class="py-20 sm:py-28 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-16">
+                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest">Transparent & Built For Your Reality</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-2 mb-4">
+                    How the KES 200,000 Bridge & Repayment Plan Works
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Designed around real Kenyan healthcare career timelines—so your monthly installment never chokes your starting salary.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <span class="text-xs font-extrabold text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full">Step 01</span>
+                    <h3 class="font-display font-bold text-lg text-white mt-4 mb-2">Verify Your License</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Once onboarded, verify your National ID, university completion, NCK/KMPDC/PPB/COC license number, and two employed guarantors online in minutes.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <span class="text-xs font-extrabold text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full">Step 02</span>
+                    <h3 class="font-display font-bold text-lg text-white mt-4 mb-2">Monthly Living Stipends</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Receive your <strong class="text-white">KES 200,000</strong> in structured monthly tranches (e.g., KES 25,000–33,000/month) directly to your M-Pesa to cover rent, food, and job-hunting costs.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-6 rounded-3xl border border-brand-500/40 bg-brand-500/5 relative">
+                    <span class="text-xs font-extrabold text-obsidian bg-brand-500 px-3 py-1 rounded-full">Step 03 • Peace of Mind</span>
+                    <h3 class="font-display font-bold text-lg text-white mt-4 mb-2">Up to 25-Month Safety Buffer</h3>
+                    <p class="text-sm text-zinc-300 leading-relaxed">
+                        If you don't secure a job within your first 12 months after licensing, <strong class="text-brand-400">you don't panic</strong>. We grant a full <strong>25-month buffer</strong> before deductions begin.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <span class="text-xs font-extrabold text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full">Step 04</span>
+                    <h3 class="font-display font-bold text-lg text-white mt-4 mb-2">KES 4,200/Mo for 12 Years</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Once earning, repay just <strong class="text-white">KES 4,200 per month</strong> over 144 months (12 years)—less than 8% of a typical starting nurse or doctor's income.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPREHENSIVE Q&A SECTION (Addressing Job Delays, 25-Month Buffer & More) -->
+    <section id="faq" class="py-20 sm:py-28 bg-zinc-950/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest">Clear Answers • Zero Hidden Clauses</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-2 mb-3">
+                    Questions Every Graduate Asks
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Everything you need to know about how Pap Fund protects you during your job hunt.
+                </p>
+            </div>
+
+            <div class="space-y-4" id="faqContainer">
+                <!-- Q1: Featured Question on Failing to Secure a Job in 12 Months -> 25 Months Buffer -->
+                <div class="glass-card rounded-2xl border border-brand-500/40 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            1. What happens if I fail to secure a job within the first 12 months after receiving my license?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-400 shrink-0 transition-transform duration-200 rotate-180"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-sm sm:text-base text-zinc-300 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        <p class="mb-3">
+                            <strong class="text-brand-400">We do not harass you or demand money you don’t have.</strong> We understand that Ministry of Health internship postings, county recruitment, and overseas visa processing can experience delays.
+                        </p>
+                        <p>
+                            If you have not secured a job within the first <strong>12 months (1 year)</strong> after receiving your board license, Pap Fund automatically extends your grace period to a full <strong class="text-white">25-month buffer</strong> from disbursement. Only after that 25-month runway do we begin collecting our gentle monthly repayment of <strong class="text-brand-400">KES 4,200/month for a period of 12 years</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="glass-card rounded-2xl border border-zinc-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            2. Why KES 4,200 per month for 12 years? Why not a short 6-month loan?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm sm:text-base text-zinc-400 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        Short-term loans force fresh graduates to pay KES 20,000–35,000 a month right when they are trying to furnish their first house, support parents, and stabilize their careers. By stretching repayment across <strong class="text-white">12 years (144 months) at KES 4,200/month</strong>, the deduction stays tiny and stress-free while you build wealth. Plus, if your salary grows or you relocate abroad (UK, US, Germany, Gulf), you can clear your balance early anytime with zero early-repayment penalties.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="glass-card rounded-2xl border border-zinc-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            3. How is the KES 200,000 sent to me—all at once or monthly?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm sm:text-base text-zinc-400 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        We disburse your <strong class="text-white">KES 200,000 in structured monthly stipends</strong> (for example, KES 25,000 to KES 33,000 per month over 6–8 months) directly to your verified Safaricom M-Pesa number. This acts like a reliable monthly "survival salary" so your rent and food are guaranteed every month while job hunting. Better yet, if you get hired in Month 3 after taking only KES 100,000, you can pause further tranches and only repay what you actually used!
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="glass-card rounded-2xl border border-zinc-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            4. Who qualifies to join Pap Fund?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm sm:text-base text-zinc-400 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        You qualify if you are a Kenyan graduate who has completed your degree or diploma and passed/obtained licensing clearance from:
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-zinc-300">
+                            <li><strong>Nursing Council of Kenya (NCK)</strong> — BScN & KRCHN Nurses</li>
+                            <li><strong>Kenya Medical Practitioners and Dentists Council (KMPDC)</strong> — Medical & Dental Officers</li>
+                            <li><strong>Pharmacy and Poisons Board (PPB)</strong> — Pharmacists</li>
+                            <li><strong>Clinical Officers Council (COC)</strong> — Clinical Officers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="glass-card rounded-2xl border border-zinc-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            5. Do I need collateral like a car logbook, land title, or current payslip?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm sm:text-base text-zinc-400 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        <strong class="text-white">No physical collateral and no payslip required.</strong> Your verified healthcare degree, professional board license, clean CRB record, and two employed guarantors (such as working parents, relatives, or senior mentors) serve as your backing. Everything is verified 100% online without ever queuing in a banking hall.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="glass-card rounded-2xl border border-zinc-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-display font-bold text-base sm:text-lg text-white">
+                            6. Does joining the waitlist cost any money today?
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm sm:text-base text-zinc-400 leading-relaxed border-t border-zinc-800/80 pt-4">
+                        <strong class="text-brand-400">Zero shillings.</strong> Joining the waitlist is completely free and reserves your priority spot when our next cohort disbursement opens. We will never ask you for a registration fee or "processing deposit" to join the waitlist.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-14 text-center">
+                <a href="#join-waitlist" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-obsidian font-display font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl transition shadow-lg shadow-brand-500/20">
+                    <span>Secure Your Spot on the Waitlist Now</span>
+                    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800/80 py-10 bg-obsidian text-xs text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md bg-brand-500 text-obsidian font-display font-extrabold flex items-center justify-center text-xs">P</div>
+                <span class="font-semibold text-zinc-300">Pap Fund Kenya</span>
+                <span>• Empowering Newly Licensed Healthcare Professionals</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <button onclick="openSetupModal()" class="hover:text-brand-400 transition">Google Sheets Sync Settings</button>
+                <span>&copy; 2026 Pap Fund. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FOUNDER MODAL: How to Connect Your Google Sheet in 2 Minutes -->
+    <div id="sheetsModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 max-w-2xl w-full rounded-3xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="sheet" class="w-5 h-5 text-brand-500"></i>
+                    <h3 class="font-display font-bold text-lg text-white">Connect Waitlist to Your Google Sheet</h3>
+                </div>
+                <button onclick="closeSetupModal()" class="text-zinc-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4 py-5 text-sm text-zinc-300">
+                <p>Follow these 3 quick steps so every student who fills out this waitlist automatically appears as a new row in your Google Sheet:</p>
+                
+                <ol class="list-decimal pl-5 space-y-2 text-zinc-400">
+                    <li>Open <strong class="text-white">Google Sheets</strong> and create a new blank spreadsheet named <code class="text-brand-400">Pap Fund Waitlist</code>.</li>
+                    <li>Click <strong class="text-white">Extensions &rarr; Apps Script</strong>, delete any existing code, paste the script below, and click <strong class="text-white">Deploy &rarr; New Deployment &rarr; Web App</strong> (Set <em>Who has access</em> to <strong class="text-brand-400">Anyone</strong>).</li>
+                    <li>Copy the <strong class="text-white">Web App URL</strong> and paste it into the box below:</li>
+                </ol>
+
+                <!-- Apps Script Snippet -->
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-3.5 relative">
+                    <button onclick="copyAppsScript()" class="absolute top-2.5 right-2.5 bg-zinc-800 hover:bg-zinc-700 text-xs text-white px-2.5 py-1 rounded-lg">
+                        Copy Script
+                    </button>
+                    <pre id="appsScriptCode" class="text-[11px] text-brand-400 overflow-x-auto leading-relaxed">function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(["Timestamp", "Full Name", "Phone", "Email", "Cadre", "License Status", "Board Number", "Primary Need"]);
+  }
+  sheet.appendRow([new Date(), data.fullName, data.phone, data.email, data.cadre, data.licenseStatus, data.boardNumber, data.primaryNeed]);
+  return ContentService.createTextOutput(JSON.stringify({"result":"success"})).setMimeType(ContentService.MimeType.JSON);
+}</pre>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Paste Your Google Apps Script Web App URL:</label>
+                    <input type="url" id="googleSheetUrlInput" placeholder="https://script.google.com/macros/s/AKfycb.../exec"
+                        class="w-full bg-zinc-900 border border-zinc-700 focus:border-brand-500 rounded-xl px-4 py-2.5 text-sm text-white outline-none">
+                </div>
+
+                <div id="savedLeadsSection" class="pt-2 border-t border-zinc-800">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold text-zinc-400">Local Backup Leads Captured (<span id="leadCount">0</span>)</span>
+                        <button onclick="exportLocalCsv()" class="text-xs text-brand-400 hover:underline">Download CSV Backup</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-3 pt-4 border-t border-zinc-800">
+                <button onclick="closeSetupModal()" class="px-4 py-2.5 rounded-xl text-xs font-semibold text-zinc-400 hover:text-white">Close</button>
+                <button onclick="saveSheetUrl()" class="bg-brand-500 hover:bg-brand-600 text-obsidian font-bold text-xs px-5 py-2.5 rounded-xl transition">
+                    Save Google Sheet Connection
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification (No alert() used) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-zinc-900 border border-brand-500/50 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-medium flex items-center gap-2">
+        <i data-lucide="check-circle" class="w-4 h-4 text-brand-400"></i>
+        <span id="toastMsg">Saved!</span>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Replace this default string with your permanent Google Apps Script Web App URL once deployed
+        const DEFAULT_GOOGLE_SCRIPT_URL = ""; 
+
+        let localLeads = [];
+
+        function getSheetUrl() {
+            return window.customSheetUrl || DEFAULT_GOOGLE_SCRIPT_URL;
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3500);
+        }
+
+        // Accordion FAQ Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isHidden = content.classList.contains('hidden');
+            
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Waitlist Form Submission Handler
+        document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalBtnHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Reserving Your Spot...</span>`;
+
+            const formData = new FormData(e.target);
+            const payload = {
+                timestamp: new Date().toISOString(),
+                fullName: formData.get('fullName'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                cadre: formData.get('cadre'),
+                licenseStatus: formData.get('licenseStatus'),
+                boardNumber: formData.get('boardNumber') || 'Not Provided',
+                primaryNeed: formData.get('primaryNeed')
+            };
+
+            // Store in session memory backup
+            localLeads.push(payload);
+            document.getElementById('leadCount').textContent = localLeads.length;
+
+            const sheetUrl = getSheetUrl();
+
+            if (sheetUrl) {
+                try {
+                    await fetch(sheetUrl, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (err) {
+                    console.error("Google Sheets sync error:", err);
+                }
+            }
+
+            // Show Success UI
+            document.getElementById('confirmName').textContent = payload.fullName.split(' ')[0];
+            document.getElementById('waitlistForm').classList.add('hidden');
+            document.getElementById('successBox').classList.remove('hidden');
+            showToast(sheetUrl ? "Lead synced directly to Google Sheets!" : "Spot reserved! Connect Google Sheets to auto-sync rows.");
+            
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+        });
+
+        // Share Link Copy Helper (using execCommand for iFrame compatibility)
+        function copyShareLink() {
+            const tempInput = document.createElement('input');
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            document.getElementById('copyBtnText').textContent = "Link Copied! Paste in WhatsApp";
+            showToast("Waitlist link copied to clipboard!");
+        }
+
+        // Google Sheets Setup Modal Controls
+        function openSetupModal() {
+            document.getElementById('googleSheetUrlInput').value = getSheetUrl();
+            document.getElementById('sheetsModal').classList.remove('hidden');
+        }
+
+        function closeSetupModal() {
+            document.getElementById('sheetsModal').classList.add('hidden');
+        }
+
+        function saveSheetUrl() {
+            const url = document.getElementById('googleSheetUrlInput').value.trim();
+            window.customSheetUrl = url;
+            closeSetupModal();
+            showToast("Google Sheets Web App URL connected!");
+        }
+
+        function copyAppsScript() {
+            const code = document.getElementById('appsScriptCode').textContent;
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast("Apps Script copied! Paste it into your Google Sheet.");
+        }
+
+        function exportLocalCsv() {
+            if (localLeads.length === 0) {
+                showToast("No leads submitted in this session yet.");
+                return;
+            }
+            const headers = ["Timestamp", "Full Name", "Phone", "Email", "Cadre", "License Status", "Board Number", "Primary Need"];
+            const rows = localLeads.map(l => [l.timestamp, l.fullName, l.phone, l.email, l.cadre, l.licenseStatus, l.boardNumber, l.primaryNeed].map(v => `"${v}"`).join(','));
+            const csvContent = "data:text/csv;charset=utf-8," + [headers.join(','), ...rows].join('\n');
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "pap_fund_waitlist_leads.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
+```
